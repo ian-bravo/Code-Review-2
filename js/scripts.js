@@ -1,4 +1,4 @@
-//Business Logic
+//`'~-,_,-~'`'~-,_,-~'`'~-,_,-~' Business Logic `'~-,_,-~'`'~-,_,-~'`'~-,_,-~'
 function surveyCalculation (colorQuestion, animalQuestion, disasterQuestion, songQuestion, movieQuestion) {
     let response;
     //conditions must match HTML value fields!
@@ -6,36 +6,52 @@ function surveyCalculation (colorQuestion, animalQuestion, disasterQuestion, son
         response = "Python!";
     } else if (colorQuestion === "red" && animalQuestion === "megalodon" && disasterQuestion === "earthquake" && songQuestion === "toxic" && movieQuestion === "hellraiser") {
         response = "Javascript!";
-    } else if (colorQuestion === "green" && animalQuestion === "sabertooth" && disasterQuestion === "meteor" && songQuestion === "circus" && movieQuestion === "scream") {
-        response = "Go!"
+    } else if (colorQuestion === "green" && animalQuestion === "pterodactyl" && disasterQuestion === "meteor" && songQuestion === "circus" && movieQuestion === "scream") {
+        response = "C++!"
     } else {
-        response = "Scratch!"
+        response = "Scratch!";
     }
 return response;    
 }
 
-//User Logic
+//`'~-,_,-~'`'~-,_,-~'`'~-,_,-~'` User Interface Logic `'~-,_,-~'`'~-,_,-~'`'~-,_,-~'`
+
+//upon loading window, call on loadForm
+window.addEventListener("load", loadForm);
+    
+
+function loadForm () {  
+    //use form ID that contains all the [names]
+    let userSelectedAnswers = document.querySelector("#form-questions");
+    //upon submit, call on userSubmitResponse
+    userSelectedAnswers.addEventListener("submit", userSubmitResponse);
+
+    //testing
+    let teacherCheatsheet = document.querySelector("#hover-reveal");
+    teacherCheatsheet.addEventListener("mouseover", revealFunction);
+
+    function revealFunction () {
+    document.getElementById("hover-reveal").removeAttribute("class");
+}
+    //testing
+
+}
+
+//runs the surveyCalculation function to determine what language to pick based on user submitting their response.
 function userSubmitResponse(event) {
     event.preventDefault();
     
-    //all the names from the one form
+    //all the [names] from form
     const colorChoice = document.querySelector("input[name='color']:checked").value;
     const animalChoice = document.querySelector('input[name="animal"]:checked').value;
     const disasterChoice = document.querySelector('input[name="disaster"]:checked').value;
     const songChoice = document.querySelector('input[name="song"]:checked').value;
     const movieChoice = document.querySelector('input[name="movie"]:checked').value;
 
-    //arguments must match const syntax in order to use business logic function
+    //[names] to be used for surveyCalculation function
     let showResults = surveyCalculation(colorChoice, animalChoice, disasterChoice, songChoice, movieChoice);
+    //displays the response from the surveyCalculation function
     document.getElementById("answer-reveal").innerText = showResults;
-    //allows the answer to be revealed
+    //removes the class to allow the final results to be revealed
     document.getElementById("final-results").removeAttribute("class");
 }
-
-function loadForm () {  
-    //form ID that contains all the [names]
-    let userSelectedAnswers = document.querySelector("#form-questions");
-    userSelectedAnswers.addEventListener("submit", userSubmitResponse);
-}
-
-window.addEventListener("load", loadForm);
