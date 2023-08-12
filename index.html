@@ -10,11 +10,13 @@
 <body>
     <h1>What programming language should you learn first? Take this quiz!</h1>
     <!-- testing -->
-    <div>
-        <h2>Hover the box below to reveal combos!</h2>
-        <p id="hover-reveal" class="hidden"><p>box for cheatsheet</p></p>
-        
-    </div>
+    <h2>Hover the bar below to reveal combos!</h2>
+        <p>
+            <ul id="cheatsheet-box">
+                <li id="hover-reveal" class="hidden">list</li>
+                <!-- may need to change the above id to class to allow more items or switch id to ul maybe-->
+            </ul>
+        </p>
     <!-- testing -->
     What is your favorite color?
     <form id="form-questions">
@@ -78,7 +80,7 @@
     <button type="submit">Submit!</button>
     </form>
     <div id="final-results" class="hidden">
-        <h3>Your should start with...</h3>
+    <h3>Your should start with...</h3>
         <p id="answer-reveal"></p>
     </div>
 </body>

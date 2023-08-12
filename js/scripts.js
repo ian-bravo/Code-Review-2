@@ -26,15 +26,13 @@ function loadForm () {
     //upon submit, call on userSubmitResponse
     userSelectedAnswers.addEventListener("submit", userSubmitResponse);
 
-    //testing
-    let teacherCheatsheet = document.querySelector("#hover-reveal");
+    //mouseover the box to reveal the different combinations
+    let teacherCheatsheet = document.querySelector("#cheatsheet-box");
     teacherCheatsheet.addEventListener("mouseover", revealFunction);
-
-    function revealFunction () {
-    document.getElementById("hover-reveal").removeAttribute("class");
 }
-    //testing
-
+//allows the reveal
+function revealFunction () {
+    document.getElementById("hover-reveal").removeAttribute("class");
 }
 
 //runs the surveyCalculation function to determine what language to pick based on user submitting their response.
