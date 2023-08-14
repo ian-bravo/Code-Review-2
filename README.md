@@ -6,7 +6,7 @@
 
 ## GitHub Page ##
 
-add!!!
+https://ian-bravo.github.io/Code-Review-2/
 
 
 ## Technologies Used
