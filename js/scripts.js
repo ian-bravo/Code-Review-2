@@ -1,7 +1,7 @@
 //`'~-,_,-~'`'~-,_,-~'`'~-,_,-~' Business Logic `'~-,_,-~'`'~-,_,-~'`'~-,_,-~'
 function surveyCalculation (colorQuestion, animalQuestion, disasterQuestion, songQuestion, movieQuestion) {
     let response;
-    //conditions must match HTML value fields!
+    //condition values must match HTML value fields!
     if (colorQuestion === "yellow" && animalQuestion === "kitten" && disasterQuestion === "fog" && songQuestion === "oops" && movieQuestion === "nightmare") {            
         response = "Python!";
     } else if (colorQuestion === "red" && animalQuestion === "megalodon" && disasterQuestion === "earthquake" && songQuestion === "toxic" && movieQuestion === "hellraiser") {
@@ -26,13 +26,16 @@ function loadForm () {
     //upon submit, call on userSubmitResponse
     userSelectedAnswers.addEventListener("submit", userSubmitResponse);
 
-    //mouseover the box to reveal the different combinations
+    //mouseover the box to reveal the different combinations (cheatsheet)
     let teacherCheatsheet = document.querySelector("#cheatsheet-box");
     teacherCheatsheet.addEventListener("mouseover", revealFunction);
 }
-//allows the reveal
+//allows the cheatsheet reveal
 function revealFunction () {
-    document.getElementById("hover-reveal").removeAttribute("class");
+    document.getElementById("hover-reveal-python").removeAttribute("class");
+    document.getElementById("hover-reveal-JS").removeAttribute("class");
+    document.getElementById("hover-reveal-C++").removeAttribute("class");
+    document.getElementById("hover-reveal-Scratch").removeAttribute("class");
 }
 
 //runs the surveyCalculation function to determine what language to pick based on user submitting their response.

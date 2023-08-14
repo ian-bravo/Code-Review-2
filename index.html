@@ -8,18 +8,19 @@
     <title>First Programming Language</title>
 </head>
 <body>
-    <h1>What programming language should you learn first? Take this quiz!</h1>
-    <!-- testing -->
-    <h2>Hover the bar below to reveal combos!</h2>
+    <h1>What programming language should you learn first? <br /> Take this quiz!</h1>
+    <h2 class="hover-style">Hover the bar below to reveal combos!</h2>
         <p>
             <ul id="cheatsheet-box">
-                <li id="hover-reveal" class="hidden">list</li>
-                <!-- may need to change the above id to class to allow more items or switch id to ul maybe-->
+                <li id="hover-reveal-python" class="hidden">Python: Yellow, Kitten, Fog, Oops!..., Nightmare</li>
+                <li id="hover-reveal-JS" class="hidden">JavaScript: Red, Megalodon, Earthquake, Toxic, Hellraiser</li>
+                <li id="hover-reveal-C++" class="hidden">C++: Green, Pterodactyl, Meteor, Circus, Scream</li>
+                <li id="hover-reveal-Scratch" class="hidden">Scratch: Everything else</li>
             </ul>
-        </p>
-    <!-- testing -->
-    What is your favorite color?
+        </p>    
     <form id="form-questions">
+    What is your favorite color?
+    <br />
         <input type="radio" name="color" value="red" id="color-red" checked>
         <label for="color-red">Red</label><br />
         <input type="radio" name="color" value="yellow" id="color-yellow">
@@ -28,7 +29,6 @@
         <label for="color-green">Green</label><br />
         <input type="radio" name="color" value="blue" id="color-blue">
         <label for="color-blue">Blue</label><br />
-    <br />
     <br />
     What is your favorite animal?
     <br />
@@ -41,7 +41,6 @@
         <input type="radio" name="animal" value="pterodactyl" id="animal-pterodactyl">
         <label for="animal-pterodactyl">Pterodactyl</label><br />
     <br />
-    <br />
     What is your favorite disaster?
     <br />
         <input type="radio" name="disaster" value="blizzard" id="disaster-blizzard" checked>
@@ -53,7 +52,6 @@
         <input type="radio" name="disaster" value="earthquake" id="disaster-earthquake">
         <label for="disaster-earthquake">Earthquake</label><br />
     <br />
-    <br />
     What is your favorite Britney Spears song?
     <br />
         <input type="radio" name="song" value="toxic" id="song-toxic" checked>
@@ -64,7 +62,6 @@
         <label for="song-womanizer">Womanizer</label><br />
         <input type="radio" name="song" value="oops" id="song-oops">
         <label for="song-oops">Oops!... I did it Again</label><br />
-    <br />
     <br />
     What is your favorite scary movie?
     <br />
